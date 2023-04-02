@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============ HEADER ============== */
+
+header{
+    background: url(../img/main-bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+/* --------- sub-nav ----------- */
+
+.sub-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 15%;
+}
+
+.sub-nav p{
+    color: grey;
+    font-size: 12px;
+}
+
+.sub-nav p span{
+    color: #fff;
+}
+
+/* ----------- nav ------------- */
+
+nav{
+    display: flex;
+    background-color: rgba(94, 93, 93, 0.248);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 15%;
+}
+
+.logo{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li{
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.active-link{
+    color: rgb(149, 149, 10);
+}
+
+.burger{
+    display: none;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* ----------- h1, h3, p, buttons ------------ */
+
+.header-info{
+    width: 100%;
+    height: calc(100% - 120px);
+    padding-left:  15%;
+    padding-right: 15%;
+    padding-top: 100px;
+}
+
+.header-info h1{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+    width: 55%;
+    margin-top: 22px;
+}
+
+.header-info h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header-info p{
+    color: #fff;
+    width: 55%;
+    margin-top: 22px;
+}
+
+.header-info div {
+    margin-top: 30px;
+}
+
+.header-info div button{
+    background-color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-info div .active-btn{
+    background-color: rgb(149, 149, 10);
+    color: #fff;
+}
+
+
+
+/* ================ MAIN ================== */
+
+
+/* ================= SECTION ONE =============== */
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+.section-one{
+    background: url(../img/section-one-bg.webp);
+    width: 100%;
+    height: 100vh;
+}
+
+.section-one-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 200px));
+    grid-auto-rows: 220px;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    height: 100%;
+}
+
+.section-one-wrapper .item{
+    background-color: rgb(21, 19, 19);
+    border-radius: 5px;
+    position: relative;
+    color: #fff;
+}
+
+.section-one-wrapper .item i{
+    position: absolute;
+    top: 13%;
+    left: 56%;
+    font-size: 70px;
+    color: rgb(149, 149, 10);
+}
+
+.section-one-wrapper .item p{
+    position: absolute;
+    top: 56%;
+    left: 13%;
+    width: 50%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-one-wrapper .item:hover{
+    background-color: rgb(149, 149, 10);
+    color: #000;
+}
+
+.section-one-wrapper .item1{
+    background-color: transparent;
+    grid-column: 1/3;
+}
+
+.section-one-wrapper .item1 h2{
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 2rem;
+    color: #fff;
+    width: 70%;
+}
+
+.section-one-wrapper .item1 p{
+    margin-top: 20px;
+    color: grey;
+    line-height: 30px;
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .header-info{
+        padding-top: 40px;
+    }
+
+    .header-info h1{
+        font-size: 2.5rem;
+    }
+
+
+    .section-one .item1 h2{
+        font-size: 1.6rem;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    /* ============= Media Header ============= */
+
+    .sub-nav{
+        display: none;
+    }
+
+    nav{
+        background-color: #000;
+        height: 50px;
+        padding: 0 20px;
+    }
+
+    .header-info{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 140px;
+    }
+
+    .header-info h1, .header-info h3, .header-info p{
+        width: auto
+    }    
+
+    nav ul{
+        display: none;
+    }
+
+    nav .burger{
+        display: block;
+    }
+
+
+
+    /* ============ Media Section-One =============== */
+    .section-one{
+        height: auto;
+    }
+    
+    .section-one-wrapper{
+        grid-template-columns: 100%;
+        margin: 0 20px;
+    }
+
+    .section-one-wrapper .item1{
+        grid-column: 1/2;
+        margin-top: 50px;
+    }
+
+    .section-one-wrapper .item p{
+        left: 5%;
+        width: 20%;
+    }
+
+    .section-one-wrapper .item i{
+        left: 85%;
+    }
+}
